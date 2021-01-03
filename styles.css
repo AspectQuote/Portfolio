@@ -2,6 +2,11 @@
   font-family: 'Roboto Mono', monospace;
   user-select: none;
 }
+a {
+  text-decoration: underline;
+  color: inherit;
+  font-size: inherit;
+}
 :root {
   --bgc: 69, 69, 69;
   --ac: 11, 26, 66;
@@ -33,7 +38,7 @@
 .titleinfo {
   color: inherit;
   font-size: 16px;
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
   padding-left: 10px;
 }
@@ -156,4 +161,139 @@
   display: inline;
   padding-right: 3px;
   transition: 0.5s;
+}
+.projectcontainer {
+  width: 90%;
+  margin-left: 5%;
+  height: 120px;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0,0,0,0.4);
+  position: relative;
+  filter: saturate(0);
+  transition: 0.5s;
+}
+.projectcontainer:hover {
+  cursor: pointer;
+  filter: saturate(1);
+}
+.projectcontainer:hover .projectname {
+  opacity: 1;
+  top: 10px;
+}
+.projectcontainer:hover .projectupdates {
+  right: 10px;
+  opacity: 1;
+}
+.projectcontainer:hover .builtwith {
+  bottom: 10px;
+  left: 10px;
+  opacity: 1;
+}
+.projectcontainer:hover .projectdesc {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.projectcontainer:hover .projecticon {
+  width: 58%;
+}
+.projectname {
+  font-size: 26px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+  text-shadow: 0px 0px 3px black;
+}
+.projectupdates {
+  top: 10px;
+  right: 0px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 16px;
+  color: white;
+}
+.projectdesc {
+  width: 40%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  font-weight: lighter;
+  font-size: 13px;
+  height: 60%;
+  overflow: hidden;
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+}
+.builtwith {
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+  color: #828282;
+  text-shadow: 0px 0px 2px black;
+}
+.builtwith::before {
+  content: "Built With ";
+  filter: brightness(1.2);
+  font-style: italic;
+}
+.projecticon {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: 1s;
+  position: absolute;
+  background-position: right;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.updateheader {
+  font-size: 32px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding-top: 20px;
+  width: 95%;
+}
+.updatedate {
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  padding-bottom: 30px;
+}
+.updateimage {
+  height: 200px;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.updatedesc {
+  padding-bottom: 10px;
+}
+.updatepatchnotes {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  border: 3px solid rgba(0,0,0,0.4);
+  font-size: 13px;
+  width: 70%;
+  margin-bottom: 20px;
 }
