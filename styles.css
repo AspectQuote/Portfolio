@@ -202,6 +202,7 @@ a {
 .projectname {
   font-size: 26px;
   position: absolute;
+  color: white;
   top: 0px;
   left: 10px;
   opacity: 0;
