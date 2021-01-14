@@ -8,8 +8,9 @@ a {
   font-size: inherit;
 }
 :root {
-  --bgc: 69, 69, 69;
-  --ac: 11, 26, 66;
+  --bgc:18, 18, 18;
+  --ac:5, 37, 92;
+  --ac2:0, 44, 120;
 }
 .sitecontainer {
   height: 100vh;
@@ -28,6 +29,13 @@ a {
   text-align: center;
   color: rgb(var(--ac));
   position: relative;
+  background: linear-gradient(131deg, rgba(var(--ac),0.80) 32%, rgba(var(--ac2),0.80) 32%, rgba(var(--ac2),0.80) 35%, rgba(69,69,69,0) 35%);
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-position: -200px 0px;
+}
+.titlecard:hover {
+  background-position: -130px 0px;
 }
 .titlename {
   color: inherit;
@@ -36,11 +44,12 @@ a {
   padding-left: 20px;
 }
 .titleinfo {
-  color: inherit;
+  color: rgb(var(--ac2));
   font-size: 16px;
   text-align: center;
   white-space: nowrap;
   padding-left: 10px;
+  font-style: italic;
 }
 .titleimage {
   height: 130px;
@@ -55,11 +64,25 @@ a {
   margin: 10px;
   padding: 5px;
   transition: 0.5s;
+  position: relative;
 }
 .titlelink:hover {
   filter: brightness(1.2);
   cursor: pointer;
-  font-size: 22px;
+  letter-spacing: 3px;
+}
+.titlelink:after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(var(--ac2));
+  transition: 0.5s;
+}
+.titlelink:hover:after {
+  width: 90%;
 }
 .content {
   overflow-x: hidden;
@@ -104,12 +127,13 @@ a {
   color: rgb(var(--ac));
   font-weight: bolder;
   text-align: left;
-  width: 98%;
+  width: 96%;
   padding-top: 30px;
   padding-left: 2%;
+  padding-right: 2%;
 }
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
   background: rgba(0,0,0,0.4);
@@ -117,7 +141,6 @@ a {
 ::-webkit-scrollbar-thumb {
   background: rgba(255,255,255,0.1);
   transition: 0.25s;
-  border-radius: 10px
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.3);
@@ -198,6 +221,7 @@ a {
 }
 .projectcontainer:hover .projecticon {
   width: 58%;
+  filter: brightness(0.6);
 }
 .projectname {
   font-size: 26px;
@@ -226,13 +250,13 @@ a {
   bottom: 0;
   right: 0;
   position: absolute;
-  font-weight: lighter;
   font-size: 13px;
   height: 60%;
   overflow: hidden;
-  color: white;
+  color: rgb(var(--ac2));
   opacity: 0;
   transition: 0.5s;
+  font-style: italic;
 }
 .builtwith {
   bottom: 0px;
@@ -243,11 +267,13 @@ a {
   z-index: 3;
   color: #828282;
   text-shadow: 0px 0px 2px black;
+  color: rgb(var(--ac2));
 }
 .builtwith::before {
   content: "Built With ";
   filter: brightness(1.2);
   font-style: italic;
+  color: white;
 }
 .projecticon {
   width: 100%;
@@ -260,6 +286,29 @@ a {
   background-position: right;
   background-size: cover;
   border-radius: 8px;
+}
+
+.languagescontainer {
+  background: rgba(0,0,0,0.2);
+  border: 2px solid rgb(var(--ac));
+  margin-top: 40px;
+  padding: 20px;
+}
+.languageheader {
+  color: rgb(var(--ac2));
+  font-size: 29px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.languageitem {
+  color: rgb(var(--ac2));
+  padding-left: 10px;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.languagedesc {
+  color: rgb(var(--ac));
+  font-size: 13px;
 }
 
 .updateheader {
