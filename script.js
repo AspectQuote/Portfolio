@@ -69,6 +69,13 @@ function changepage(page){
         <div class='projectdesc'>A soon to be released  spiritual successor to Cube Collector Classic, Cube Collector Online will be bringing multiplayer, networking, a modern feel, and more content to the genre. You can play the alpha test now.</div>
         <div class='builtwith'>Jquery, Vue.js, Node.js, and Amazon S3</div>
       </div>
+      <div onclick='window.open("https://aspectquote.github.io/CSGOCTools/")' class='projectcontainer' style='margin-bottom: 30px;'>
+        <div class='projectname'>CSGOClicker Tools</div>
+        <div class='projecticon' style='background-image: url("Images/csgoctbg.PNG")'></div>
+        <div class='projectupdates'>First Release: January 21, 2021 <br/> Last Updated: January 23, 2021</div>
+        <div class='projectdesc'>A stats and data site for CSGOClicker. It is a hub of tools for CSGOClicker players to use in order to increase their efficiency and heighten their experience with the game.</div>
+        <div class='builtwith'>Vanilla JS</div>
+      </div>
       `
       break;
     default:
