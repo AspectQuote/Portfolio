@@ -2,7 +2,7 @@ function changepage(page){
   switch (page) {
     case 'about':
       document.getElementById("linkcontents").innerHTML = `
-      I am currently working solo on multiple projects. I have been doing frontend web development for 7 years and backend development for only 1 year.
+      I am currently working solo on multiple projects, and working with a team on one. I have been doing frontend web development for 7 years and backend development for 1 year.
       <br/>
       <div class='languagescontainer'>
         <div class='languageheader'>Languages</div>
@@ -52,7 +52,7 @@ function changepage(page){
         <div class='projectname'>TF2Clicker</div>
         <div class='projecticon' style='background-image: url("Images/tf2cbg.png")'></div>
         <div class='projectupdates'>First Release: August 28, 2020 <br/> Last Updated: December 2, 2020</div>
-        <div class='projectdesc'>A game similar to (and inspired by) CSGOClicker, TF2Clicker is about unboxing, trading, and gambling your TF2 Items with other people! TF2Clicker uses assets and intellectual property of Valve Corp.</div>
+        <div class='projectdesc'>A game similar to (and inspired by) CSGOClicker, TF2Clicker is about unboxing, trading, and gambling your TF2 Items with other people! TF2Clicker uses assets and intellectual property of Valve Corp. TF2Clicker is down right now.</div>
         <div class='builtwith'>Jquery, Node.js, and Amazon S3</div>
       </div>
       <div onclick='window.open("https://aspectquote.github.io/clarity")' class='projectcontainer'>
